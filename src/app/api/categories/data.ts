@@ -1,1 +1,1 @@
-export const categories = ["dishs", "main", "pizza"];
+export const categories = ["dish", "main", "pizza", "lunch"];
