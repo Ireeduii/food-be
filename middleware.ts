@@ -34,7 +34,6 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-// Configure which routes the middleware should run on
 export const config = {
   matcher: "/api/:path*", // Apply to all API routes
 };
