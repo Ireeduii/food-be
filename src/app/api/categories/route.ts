@@ -29,8 +29,9 @@
 import FoodCategory from "@/app/lib/models/FoodCategory";
 import connectDB from "@/app/lib/connectDb";
 import { NextResponse } from "next/server";
+import { request } from "http";
 
-export const GET = async (request: Request) => {
+export const GET = async (req: Request) => {
   const category = await FoodCategory.find();
 
   return NextResponse.json(category);
@@ -45,4 +46,8 @@ export const POST = async (request: Request) => {
   });
 
   return NextResponse.json({ message: "Success", category });
+};
+
+export const PUT = async (req: Request) => {
+  const body = await req.json();
 };
