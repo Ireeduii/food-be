@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     );
   } else {
     return NextResponse.json(
-      { message: "Food Failed to create" },
+      { message: "Failed to create food" },
       { status: 400 }
     );
   }
