@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 
-export const POST = async (request: Request) => {
-  const body = await request.json();
-  const { categoryId } = body;
+export async function POST(req: Request) {
+  const body = await req.json();
+  const { category } = body;
 
-  const response = NextResponse.json({ data: categoryId }, { status: 200 });
-
+  const response = NextResponse.json({ data: category }, { status: 200 });
   response.headers.set("Access-Control-Allow-Origin", "*");
   response.headers.set(
     "Access-Control-Allow-Methods",
@@ -16,4 +15,4 @@ export const POST = async (request: Request) => {
     "Content-Type, Authorization"
   );
   return response;
-};
+}
